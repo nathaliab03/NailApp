@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total */
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.bg-login {
+    background-color: #6c1428; /* Altere para a cor desejada */
+    min-height: 100vh; /* Para ocupar toda a altura da página */
+}
+
+.bg-header-login {
+    background-image: url('../img/login/Vector 1.png');
+    background-size: cover;
+    height: 380px;
+    width: 100%;
+    margin: -3px; /* Remove margens externas */
+    padding: 0; /* Remove preenchimento interno */
+    display: flex; /* Ativa o modelo flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+

@@ -1,0 +1,74 @@
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #6C1428;
+      --lightButton: #D9D9D9;
+      --foreground: #ededed;
+    }
+  }
+
+  input:-webkit-autofill {
+    background-color: var(--background) !important; /* Garantir a cor de fundo */
+    border-color: var(--lightButton) !important; /* Garantir a cor da borda */
+    color: #B6B6B6 !important; /* Garantir a cor do texto */
+    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s, border-color 5000s ease-in-out 0s;
+  }
+
+  @layer components {
+    .btn-primary {
+      @apply bg-primary text-red-950 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary;
+    }
+
+  /* Em globals.css */
+  .input-custom {
+    @apply p-2 border-b-4 focus:outline-none focus:ring-0;
+    background-color: var(--background) !important;
+    border-color: var(--lightButton) !important;
+    color: #B6B6B6 !important;
+    transition: border-color 0.2s ease-in-out;
+  }
+
+  .input-custom:focus {
+    border-color: #FF5733  /* Exemplo de cor para o foco */
+  }
+
+  .input-agenda {
+    @apply p-2 border-b-4 focus:outline-none focus:ring-0;
+    background-color: var(--background) !important;
+    border-color: var(--lightButton) !important;
+    color: #B6B6B6 !important;
+    transition: border-color 0.2s ease-in-out;
+  }
+
+  .input-agenda-option {
+    @apply p-2 border-b-4 focus:outline-none focus:ring-0;
+    background-color: #661b2d !important; /* Cor inicial */
+    border-color: var(--lightButton) !important;
+    color: #B6B6B6 !important;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  }
+  
+  .input-agenda-option:hover,
+  .input-agenda-option:focus,
+  .input-agenda-option[data-focus] {
+    background-color: #850d45 !important; /* Cor ao passar o mouse */
+    color: #B6B6B6 !important; /* Cor do texto ao passar o mouse */
+  }
+    
+  }
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    background-color: #6c1428;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23dcdcdc' fill-opacity='0.12' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    font-family: Arial, Helvetica, sans-serif;
+  }
