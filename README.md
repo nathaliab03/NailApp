@@ -7,6 +7,7 @@
 - **Banco de Dados**: SQL Server 2019 ou superior.
 - **Framework**: .NET 7.0 (ou conforme especificado no projeto).
 - **Ferramentas**: Entity Framework Core (via NuGet).
+- **FrontEnd**: NodeJs
 
 ## Configuração do Projeto
 
@@ -29,5 +30,13 @@
 - Inicie a aplicação com:
    ```bash
   dotnet run
+7. **Para o FontEnd**
+- Acesse a pasta **FrontEnd/nailapp**
+8. **Instale as dependências:**
+   ```bash
+   npm install
+9. **Inicie o servidor de desenvolvimento:**
+    ```bash
+    npm run dev
 ## Funcionalidades
 Gerenciamento de agendas e estilistas para salões de unha.
